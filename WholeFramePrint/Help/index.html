@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Help and user guide for Whole-Frame Tiled Print — tile large artworks across multiple sheets for printing.">
+  <title>Help — Whole-Frame Tiled Print</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Whole-Frame Tiled Print</h1>
+      <p id="header-subtitle">Help &amp; User Guide</p>
+    </div>
+  </header>
+
+  <nav class="top-nav" aria-label="Site">
+    <ul>
+      <li><a href="index.html" class="active">Help</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="lang-tabs" role="tablist" aria-label="Language">
+      <button type="button" class="active" data-lang="en" aria-selected="true">English</button>
+      <button type="button" data-lang="zh" aria-selected="false">简体中文</button>
+      <button type="button" data-lang="fr" aria-selected="false">Français (CA)</button>
+    </div>
+
+    <!-- English -->
+    <div class="lang-panel active" id="panel-en" lang="en">
+      <section class="card">
+        <h2>Overview</h2>
+        <p><strong>Whole-Frame Tiled Print</strong> is a macOS application for printing large images—calligraphy, paintings, photography, and other artwork—by splitting them across multiple standard paper sheets. You can print at true physical size or scale the image to fit a chosen number of sheets with intelligent layout and margins.</p>
+        <p>All processing happens <strong>on your Mac</strong>. Your images are never uploaded to our servers.</p>
+      </section>
+
+      <section class="card">
+        <h2>Main Window</h2>
+        <img class="screenshot" src="help-screenshot.png" width="1200" height="750" alt="Whole-Frame Tiled Print main window showing sidebar controls and tiled preview of a handscroll painting">
+        <p class="caption">The main window: sidebar settings (left), tiled preview (center), status bar (bottom), and toolbar actions (top right).</p>
+        <div class="grid-2">
+          <div class="feature"><strong>① Sidebar</strong><br>Load artwork, choose print mode, paper, assembly options, and printer.</div>
+          <div class="feature"><strong>② Preview</strong><br>Live grid showing how each sheet will look when assembled.</div>
+          <div class="feature"><strong>③ Status bar</strong><br>Sheet count, assembly size, scale, resolution, margins, and overlap.</div>
+          <div class="feature"><strong>④ Toolbar</strong><br>Open image, export (PDF/JPEG/PNG/TIFF), and print.</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Quick Start</h2>
+        <ol class="steps">
+          <li>Click <strong>Open Image</strong> or drag an image file (PNG, JPEG, TIFF, HEIC) into the window.</li>
+          <li>Choose a <strong>Print Mode</strong> (see below) and set paper size, orientation, and units.</li>
+          <li>Review the tiled preview and status bar. Adjust overlap or margins if needed.</li>
+          <li><strong>Export</strong> sheets as separate files (filename includes row/column, e.g. <code>Artwork_R1C1.pdf</code>) or a combined PDF, or click <strong>Print</strong> to send to your system printer.</li>
+          <li>Trim and assemble printed sheets using the overlap zones and alignment marks on the physical printout.</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Print Modes</h2>
+        <h3>Actual Size (100%)</h3>
+        <p>Prints the image at a specified physical width. The app calculates how many sheets are required and tiles the image at true scale. Set <strong>Artwork Width</strong>, <strong>Tile overlap</strong> (for gluing alignment), and <strong>Outer assembly margin</strong> when centering is enabled.</p>
+        <h3>Fit to Sheets · Smart Scale</h3>
+        <p>Scales the entire image to fit a chosen grid of sheets (e.g. 2×3). Use <strong>Auto-fit to aspect ratio</strong> to suggest a grid. Golden-ratio margins can be applied for a balanced border around the artwork.</p>
+      </section>
+
+      <section class="card">
+        <h2>Assembly Options</h2>
+        <ul>
+          <li><strong>Center image in assembly</strong> — Centers the artwork in the sheet grid. Only outer-edge sheets keep margins; inner sheets print edge-to-edge for easier assembly without trimming interior seams.</li>
+          <li><strong>Outer assembly margin</strong> — Safe border on the perimeter of the assembled piece.</li>
+          <li><strong>Preview marks</strong> — Crop marks and page labels (R·C) appear in the on-screen preview only. Printed and exported files contain clean output without guides or on-page numbering. Sheet position is encoded in export filenames (<code>_R1C1</code>, <code>_R2C3</code>, etc.).</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Export &amp; Print</h2>
+        <table>
+          <thead><tr><th>Action</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td>Combined PDF…</td><td>Single multi-page PDF, one page per sheet.</td></tr>
+            <tr><td>Separate PDFs / JPEGs / PNGs / TIFFs…</td><td>One file per sheet at paper size; filenames include row and column index.</td></tr>
+            <tr><td>Print</td><td>Opens the macOS print dialog using your installed system printers.</td></tr>
+          </tbody>
+        </table>
+        <div class="notice">Export and print output do not include dashed boundary lines, crop marks, or on-page labels. Use preview overlays only as alignment aids.</div>
+      </section>
+
+      <section class="card">
+        <h2>Supported Paper</h2>
+        <p>A5, A4, A3, A2, A1, Letter, Legal, and Tabloid — portrait or landscape. Units: millimeters, centimeters, or inches.</p>
+      </section>
+
+      <section class="card">
+        <h2>FAQ</h2>
+        <h3>Why is effective resolution shown in orange?</h3>
+        <p>Values below 150 dpi may look soft when printed large. Use a higher-resolution source image or reduce the output size.</p>
+        <h3>Can I use network printers?</h3>
+        <p>Yes. The app uses macOS printing services. Add printers in System Settings → Printers &amp; Scanners, then refresh the list in the app.</p>
+        <h3>Does the app require the internet?</h3>
+        <p>No. Core features work offline. Network access is used only for communicating with network printers through the system print subsystem, not for sending your images to us.</p>
+      </section>
+
+      <section class="card">
+        <h2>Support</h2>
+        <p>For questions, bug reports, or feature requests, contact:</p>
+        <p><strong>Email:</strong> <a href="mailto:support@example.com">support@example.com</a><br>
+        <em>Replace with your App Store support email before submission.</em></p>
+        <p>See also our <a href="privacy.html">Privacy Policy</a>.</p>
+      </section>
+    </div>
+
+    <!-- 简体中文 -->
+    <div class="lang-panel" id="panel-zh" lang="zh-Hans">
+      <section class="card">
+        <h2>概述</h2>
+        <p><strong>整幅拼接打印（Whole-Frame Tiled Print）</strong> 是一款 macOS 应用，可将书法、国画、摄影等大幅作品分割到多张标准打印纸上进行拼接输出。支持按真实物理尺寸打印，或在指定数量的纸张上智能缩放布局。</p>
+        <p>所有处理均在<strong>您的 Mac 本地</strong>完成，图片不会上传至我们的服务器。</p>
+      </section>
+
+      <section class="card">
+        <h2>主界面</h2>
+        <img class="screenshot" src="help-screenshot.png" width="1200" height="750" alt="整幅拼接打印主界面，左侧为设置栏，中央为拼版预览">
+        <p class="caption">主界面：左侧设置栏、中央拼版预览、底部状态栏、右上方工具栏。</p>
+        <div class="grid-2">
+          <div class="feature"><strong>① 侧栏</strong><br>加载作品、选择模式、纸张、拼接与打印机。</div>
+          <div class="feature"><strong>② 预览</strong><br>实时显示每张纸的拼版效果。</div>
+          <div class="feature"><strong>③ 状态栏</strong><br>张数、总尺寸、缩放、分辨率、留白与重叠。</div>
+          <div class="feature"><strong>④ 工具栏</strong><br>打开、导出、打印。</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>快速开始</h2>
+        <ol class="steps">
+          <li>点击<strong>打开图片</strong>，或将 PNG/JPEG/TIFF/HEIC 文件拖入窗口。</li>
+          <li>选择<strong>打印模式</strong>，设置纸张大小、方向与单位。</li>
+          <li>查看预览与状态栏，按需调整重叠与留白。</li>
+          <li><strong>导出</strong>分张文件（文件名含行列序号，如 <code>作品_R1C1.pdf</code>）或合并 PDF，或<strong>打印</strong>至系统打印机。</li>
+          <li>按重叠区域对齐，裁切并拼合各张纸。</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>打印模式</h2>
+        <h3>原尺寸拼接 (100%)</h3>
+        <p>按指定物理宽度 1:1 打印，自动计算所需纸张数量。可设置作品宽度、拼接重叠与外圈留白。</p>
+        <h3>指定纸张 · 智能缩放</h3>
+        <p>在选定的行列网格上缩放整幅画面，可按比例智能匹配张数，并支持黄金分割留白。</p>
+      </section>
+
+      <section class="card">
+        <h2>拼接选项</h2>
+        <ul>
+          <li><strong>画面居中拼接</strong> — 仅最外圈纸张保留留白，内部纸张满版打印，便于拼合。</li>
+          <li><strong>预览标记</strong> — 裁切线与页码标签仅显示在屏幕预览中；打印与导出的文件为干净输出，序号体现在文件名中（<code>_R1C1</code> 等）。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>导出与打印</h2>
+        <table>
+          <thead><tr><th>操作</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td>合并 PDF</td><td>多页 PDF，每页对应一张纸。</td></tr>
+            <tr><td>分张 PDF/JPEG/PNG/TIFF</td><td>每张纸一个文件，文件名含行列序号。</td></tr>
+            <tr><td>打印</td><td>使用 macOS 系统打印对话框与已安装打印机。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>常见问题</h2>
+        <h3>有效分辨率显示橙色？</h3>
+        <p>低于 150 dpi 时大幅打印可能偏软，请使用更高分辨率原图或缩小输出尺寸。</p>
+        <h3>需要联网吗？</h3>
+        <p>核心功能可离线使用。网络权限仅用于系统与网络打印机通信，不会上传您的图片。</p>
+      </section>
+
+      <section class="card">
+        <h2>支持</h2>
+        <p><strong>电子邮件：</strong> <a href="mailto:support@example.com">support@example.com</a></p>
+        <p>请参阅 <a href="privacy.html">隐私政策</a>。</p>
+      </section>
+    </div>
+
+    <!-- Français (Canada) -->
+    <div class="lang-panel" id="panel-fr" lang="fr-CA">
+      <section class="card">
+        <h2>Aperçu</h2>
+        <p><strong>Whole-Frame Tiled Print</strong> est une application macOS pour imprimer de grandes images — calligraphie, peinture, photographie — en les divisant sur plusieurs feuilles standard. Impression à taille réelle ou mise à l'échelle intelligente sur une grille choisie.</p>
+        <p>Tout le traitement se fait <strong>localement sur votre Mac</strong>. Vos images ne sont jamais téléversées sur nos serveurs.</p>
+      </section>
+
+      <section class="card">
+        <h2>Fenêtre principale</h2>
+        <img class="screenshot" src="help-screenshot.png" width="1200" height="750" alt="Fenêtre principale de Whole-Frame Tiled Print avec aperçu en mosaïque">
+        <p class="caption">Barre latérale (gauche), aperçu (centre), barre d'état (bas), barre d'outils (haut droite).</p>
+      </section>
+
+      <section class="card">
+        <h2>Démarrage rapide</h2>
+        <ol class="steps">
+          <li>Ouvrez une image (PNG, JPEG, TIFF, HEIC) ou glissez-déposez-la.</li>
+          <li>Choisissez le mode, le format de papier et l'orientation.</li>
+          <li>Vérifiez l'aperçu et exportez ou imprimez.</li>
+          <li>Les fichiers exportés incluent la position dans le nom (<code>_R1C1</code>).</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Export et impression</h2>
+        <p>L'impression et l'export n'incluent pas de lignes pointillées, marques de coupe ni numéros sur la page. Les repères n'apparaissent que dans l'aperçu à l'écran.</p>
+      </section>
+
+      <section class="card">
+        <h2>Soutien</h2>
+        <p><strong>Courriel :</strong> <a href="mailto:support@example.com">support@example.com</a></p>
+        <p>Consultez notre <a href="privacy.html">Politique de confidentialité</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Minghao Wang · Whole-Frame Tiled Print · macOS · <a href="privacy.html">Privacy Policy</a></p>
+    <p>Last updated: July 6, 2026</p>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.lang-tabs button');
+    const panels = { en: document.getElementById('panel-en'), zh: document.getElementById('panel-zh'), fr: document.getElementById('panel-fr') };
+    const subtitles = { en: 'Help & User Guide', zh: '帮助与用户指南', fr: 'Aide et guide d\'utilisation' };
+    tabs.forEach(btn => btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      tabs.forEach(b => { b.classList.toggle('active', b === btn); b.setAttribute('aria-selected', b === btn); });
+      Object.entries(panels).forEach(([k, p]) => p.classList.toggle('active', k === lang));
+      document.getElementById('header-subtitle').textContent = subtitles[lang];
+      document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang === 'fr' ? 'fr-CA' : 'en';
+    }));
+  </script>
+</body>
+</html>

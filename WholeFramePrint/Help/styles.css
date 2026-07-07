@@ -1,0 +1,227 @@
+:root {
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --text: #1c2430;
+  --muted: #5c6b7a;
+  --accent: #4a6278;
+  --accent-dark: #364d61;
+  --border: #dde3ea;
+  --gold: #c4a24e;
+  --radius: 12px;
+  --shadow: 0 8px 28px rgba(28, 36, 48, 0.08);
+  --max: 920px;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+a { color: var(--accent-dark); }
+
+header.site-header {
+  background: linear-gradient(135deg, #364d61 0%, #4a6278 100%);
+  color: #fff;
+  padding: 2.5rem 1.5rem 2rem;
+}
+
+header.site-header .wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+header.site-header h1 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+header.site-header p {
+  margin: 0;
+  opacity: 0.92;
+  max-width: 52rem;
+}
+
+nav.top-nav {
+  max-width: var(--max);
+  margin: -1rem auto 0;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+nav.top-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  width: fit-content;
+}
+
+nav.top-nav a {
+  display: block;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+nav.top-nav a.active,
+nav.top-nav a:hover {
+  background: #eef2f6;
+  color: var(--accent-dark);
+}
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  color: var(--accent-dark);
+}
+
+.card h3 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.card p:last-child,
+.card ul:last-child,
+.card ol:last-child { margin-bottom: 0; }
+
+.screenshot {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  display: block;
+  margin: 1rem 0;
+}
+
+.caption {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-top: 0.5rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.feature {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.feature strong { color: var(--accent-dark); }
+
+ol.steps { padding-left: 1.2rem; }
+ol.steps li { margin-bottom: 0.65rem; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: #eef2f6; }
+
+.lang-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.lang-tabs button {
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.lang-tabs button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.lang-panel { display: none; }
+.lang-panel.active { display: block; }
+
+.notice {
+  background: #eef6ff;
+  border: 1px solid #c8ddf5;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  margin: 1rem 0;
+}
+
+footer.site-footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.5rem 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121820;
+    --surface: #1a2330;
+    --text: #e8edf2;
+    --muted: #9aa8b6;
+    --border: #2a3644;
+    --accent: #7a93ab;
+    --accent-dark: #b8c9d9;
+  }
+  nav.top-nav a:hover,
+  nav.top-nav a.active { background: #243041; }
+  .feature { background: #151d28; }
+  th { background: #243041; }
+  .notice { background: #1a2840; border-color: #2f4d73; }
+}
